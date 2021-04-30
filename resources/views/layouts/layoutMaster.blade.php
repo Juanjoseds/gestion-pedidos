@@ -10,6 +10,8 @@
 </head>
 <body class="antialiased">
     @yield('content')
-    @yield('javascript')
+    @yield('scripts')
+    <script src="{{asset("/js/scripts/feather.min.js")}}"></script>
+    <script>feather.replace()</script>
 </body>
 </html>

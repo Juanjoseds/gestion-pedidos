@@ -1,6 +1,9 @@
 {
-    "/css/pages/login/login.css": "/css/pages/login/login.css?id=68b329da9893e34099c7",
+    "/css/pages/login/login.css": "/css/pages/login/login.css?id=33f6cb5dbf55ef1fbe5e",
     "/css/pages/inicio/inicio.css": "/css/pages/inicio/inicio.css?id=68b329da9893e34099c7",
-    "/js/app.js": "/js/app.js?id=54de6264756ace37980b",
-    "/js/bootstrap.js": "/js/bootstrap.js?id=68164737c41fca17fe10"
+    "/js/scripts/feather.min.js": "/js/scripts/feather.min.js?id=199d840e1af3952233f1",
+    "/js/scripts/jquery.min.js": "/js/scripts/jquery.min.js?id=8fb8fee4fcc3cc86ff6c",
+    "/js/app.js": "/js/app.js?id=67f2e7bcc9076773020d",
+    "/js/bootstrap.js": "/js/bootstrap.js?id=08a18d4cb719af196356",
+    "/js/pages/login.js": "/js/pages/login.js?id=1374df41530b1521b987"
 }

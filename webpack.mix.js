@@ -82,15 +82,15 @@ mixAssetsDir('vendors/css/editors/quill/fonts/', (src, dest) => mix.copy(src, de
 }); */
 
 mix.then(function() {
-  if(process.env.MIX_CONTENT_DIRECTION === "rtl"){
-    let command = `node ${path.resolve('node_modules/rtlcss/bin/rtlcss.js')} -d -e ".css" ./public/css/ ./public/css/`;
-    exec(command, function(err, stdout, stderr) {
-      if(err !== null){
-        console.log(err);
-      }
-    });
+    if(process.env.MIX_CONTENT_DIRECTION === "rtl"){
+        let command = `node ${path.resolve('node_modules/rtlcss/bin/rtlcss.js')} -d -e ".css" ./public/css/ ./public/css/`;
+        exec(command, function(err, stdout, stderr) {
+            if(err !== null){
+                console.log(err);
+            }
+        });
 
-  }
+    }
 });
 
 mix.version();

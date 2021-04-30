@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/login/login');
 });
 
 Route::get('/offline', function () {
     return view('welcome');
 });
+
+Route::post('/login', 'loginController@login')->name('login');
+/*Auth::routes();*/
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
