@@ -1,12 +1,13 @@
 {
-    "/css/pages/login/login.css": "/css/pages/login/login.css?id=33f6cb5dbf55ef1fbe5e",
+    "/css/pages/login/login.css": "/css/pages/login/login.css?id=35c16188d6230102f4fd",
     "/css/pages/inicio/inicio.css": "/css/pages/inicio/inicio.css?id=68b329da9893e34099c7",
     "/css/pages/cliente/cliente.css": "/css/pages/cliente/cliente.css?id=68b329da9893e34099c7",
     "/js/scripts/feather.min.js": "/js/scripts/feather.min.js?id=199d840e1af3952233f1",
     "/js/scripts/jquery.min.js": "/js/scripts/jquery.min.js?id=8fb8fee4fcc3cc86ff6c",
+    "/js/scripts/sweetalert2.all.js": "/js/scripts/sweetalert2.all.js?id=c8c5a6947eebefdca645",
     "/js/app.js": "/js/app.js?id=67f2e7bcc9076773020d",
     "/js/bootstrap.js": "/js/bootstrap.js?id=08a18d4cb719af196356",
-    "/js/pages/login.js": "/js/pages/login.js?id=8d24e4788cfe10f10423",
+    "/js/pages/login.js": "/js/pages/login.js?id=bec409ed121cdd985c04",
     "/vendors/css/bootstrap-grid.css": "/vendors/css/bootstrap-grid.css?id=9a06dd7167f88983e5a1",
     "/vendors/css/bootstrap-reboot.css": "/vendors/css/bootstrap-reboot.css?id=d467301983bd82f277e5",
     "/vendors/css/bootstrap.css": "/vendors/css/bootstrap.css?id=6d0390c053b857e8d09d"

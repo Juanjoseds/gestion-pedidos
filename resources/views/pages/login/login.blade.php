@@ -15,5 +15,6 @@
 @section('scripts')
     <script src="{{asset("/js/scripts/jquery.min.js")}}"></script>
     <script src="{{asset("/js/pages/login.js")}}"></script>
+    <script src="{{asset("/js/scripts/sweetalert2.all.js")}}"></script>
     {{--<script src="{{asset("/js/bootstrap.js")}}"></script>--}}
 @endsection
