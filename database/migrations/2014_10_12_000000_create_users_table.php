@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('dni');
-            $table->boolean('company');
+            $table->string('tipo')->default('cliente');
             $table->string('location');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

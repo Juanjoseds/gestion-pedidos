@@ -10,8 +10,11 @@ signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
 
-$('#formulario').on('submit', function (e){
+/*$('#formulario').on('submit', function (e){
     e.preventDefault();
+
+    let email = $('#email').val();
+    let password = $('#password').val();
 
     console.log('Submit!!');
     $.ajaxSetup({
@@ -23,11 +26,11 @@ $('#formulario').on('submit', function (e){
         type: 'POST',
         url: '/login',
         data: {
-            param1: 'abc',
-            param2: '123'
+            email: email,
+            password: password
         },
         success: function(data) {
-            // ...
+            console.log('OK');
         }
     });
-});
+});*/

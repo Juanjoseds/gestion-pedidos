@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,15 +17,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('pages/login/login');
+Route::get('/', [LoginController::class, 'index']);
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::group(['middleware' => 'check-type-user:cliente'],function(){
+        Route::get('/cliente', [ClienteController::class, 'index'])->name('cliente');
+    });
+
+    Route::group(['middleware' => 'check-type-user:tienda'],function(){
+        Route::get('/tienda', [ClienteController::class, 'index']);
+    });
+
+    Route::get('/logout', [LoginController::class, 'logout']);
+
 });
+
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
 
 Route::get('/offline', function () {
     return view('welcome');
 });
-
-Route::post('/login', 'loginController@login')->name('login');
-/*Auth::routes();*/
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
