@@ -17,12 +17,16 @@ class CreateTiendasTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
 
             $table->string('cif');
             $table->string('location')->nullable();
-            $table->string('horario');
+            $table->string('horario')->nullable();
             $table->string('estado');
+            $table->string('nombre');
             $table->longText('imagen')->nullable();
             $table->timestamps();
         });

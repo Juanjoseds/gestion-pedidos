@@ -32,7 +32,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['title' => 'Datos erróneos', 'text' => 'Rellena los campos correctamente'], 402);
+            return response()->json(['title' => 'Datos erróneos', 'text' => 'Rellena los campos correctamente'], 400);
         }
 
         if($request->nombreTienda !== null){
@@ -43,7 +43,7 @@ class UserController extends Controller
             ]);
 
             if ($validator->fails()) {
-                return response()->json(['title'=> 'Datos erróneos', 'text' => 'Rellena los campos de la tienda correctamente'], 402);
+                return response()->json(['title'=> 'Datos erróneos', 'text' => 'Rellena los campos de la tienda correctamente'], 400);
             }
         }
 
@@ -66,6 +66,7 @@ class UserController extends Controller
             //Si se guarda correctamente comprobamos si es una tienda
             if($user->tipo === 'tienda'){
                 $tienda = new Tienda();
+                $tienda->nombre = $request->nombreTienda;
                 $tienda->user_id = $user->id;
                 $tienda->cif = $request->cif;
                 $tienda->location = $request->location;
