@@ -139,6 +139,34 @@
                 align-items: center;
                 height: 100%;
 
+                .main-estado{
+                    display: flex;
+                    font-family: 'Poppins', sans-serif;
+                    text-transform: capitalize;
+
+
+
+                    .circle{
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 99px;
+                    }
+
+                    &.estado-pendiente{
+                        color: orange;
+                    }
+                    &.estado-cancelado{
+                        color: red;
+                    }
+                    &.estado-preparado{
+                        color: green;
+                    }
+                    &.estado-preparado{
+                        color: #5b72c6;
+                    }
+                }
+
+
                 .separador{
                     border-right: 1px solid #d0d0d0;
                 }

@@ -1,6 +1,6 @@
 <div id="content-s1">
     <div class="bg-header">
-        <h1>My Dashboard</h1>
+        <h1>{{$tienda->nombre}}</h1>
 
         <div class="main-filter row">
             <div class="filter">
@@ -35,66 +35,51 @@
 
     <div id="tarjetas">
 
-        <div class="card">
+        @foreach($pedidos as $pedido)
+            <div class="card">
 
-            <div class="content row">
+                <div class="content row">
 
-                <div class="col-1 separador">
-                    <p class="hora">16:00</p>
-                    <p class="lastTime">20 min</p>
-                </div>
-                <div class="col-1">
-                    <img src="https://www.rogerfederer.com/templates/protostar/img/fed_prof.jpg" alt="RF">
-                </div>
-                <div class="col-2 separador">
-                    <p class="nombre">El puto amo</p>
-                    <p>45889652P</p>
-                </div>
-                <div class="col-2 separador">
-                    <p class="fecha">2 Mayo</p>
-                    <p>Estado</p>
-                </div>
-                <div class="col-4">
-                    <p class="comentario">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque enim et id odio ullam. Soluta!</p>
-                </div>
-                <div class="col actions">
-                    <i data-feather="edit"></i>
-                    <i data-feather="trash-2"></i>
-                </div>
+                    <div class="col-1 separador">
+                        <p class="hora">{{$pedido->created_at->format('H:i')}}</p>
+                        <p class="lastTime">{{\Illuminate\Support\Carbon::now()->diffForHumans($pedido->created_at, true)}}</p>
+                    </div>
+                    <div class="col-1">
+                        <img src="https://www.rogerfederer.com/templates/protostar/img/fed_prof.jpg" alt="RF">
+                    </div>
+                    <div class="col-2 separador">
+                        <p class="nombre">{{$pedido->user->name}}</p>
+                        <p>{{$pedido->user->dni}}</p>
+                    </div>
+                    <div class="col-2 separador">
+                        <p class="fecha">{{$pedido->created_at->format('d M')}}</p>
 
-            </div>
+                        <div class="main-estado
+                               @if($pedido->estado==='pendiente') estado-pendiente @endif
+                               @if($pedido->estado==='cancelado') estado-cancelado @endif
+                               @if($pedido->estado==='preparado') estado-preparado @endif
+                               @if($pedido->estado==='en proceso') estado-proceso @endif
 
-        </div>
-        <div class="card">
+                            ">
+                            {{--<div class="circle"></div>
+                            <p class="estado" >{{$pedido->estado}}</p>--}}
+                            <li>{{$pedido->estado}}</li>
+                        </div>
 
-            <div class="content row">
+                    </div>
+                    <div class="col-4">
+                        <p class="comentario">{{$pedido->comentario}}</p>
+                    </div>
+                    <div class="col actions">
+                        <i data-feather="edit"></i>
+                        <i data-feather="trash-2"></i>
+                    </div>
 
-                <div class="col-1 separador">
-                    <p class="hora">16:00</p>
-                    <p class="lastTime">20 min</p>
-                </div>
-                <div class="col-1">
-                    <img src="https://www.rogerfederer.com/templates/protostar/img/fed_prof.jpg" alt="RF">
-                </div>
-                <div class="col-2 separador">
-                    <p class="nombre">El puto amo</p>
-                    <p>45889652P</p>
-                </div>
-                <div class="col-2 separador">
-                    <p class="fecha">2 Mayo</p>
-                    <p>Estado</p>
-                </div>
-                <div class="col-4">
-                    <p class="comentario">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque enim et id odio ullam. Soluta!</p>
-                </div>
-                <div class="col actions">
-                    <i data-feather="edit"></i>
-                    <i data-feather="trash-2"></i>
                 </div>
 
             </div>
+        @endforeach
 
-        </div>
 
     </div>
 </div>

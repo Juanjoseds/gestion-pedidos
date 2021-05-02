@@ -119,6 +119,28 @@
   align-items: center;
   height: 100%;
 }
+#content-s1 #tarjetas .card .content .main-estado {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+#content-s1 #tarjetas .card .content .main-estado .circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 99px;
+}
+#content-s1 #tarjetas .card .content .main-estado.estado-pendiente {
+  color: orange;
+}
+#content-s1 #tarjetas .card .content .main-estado.estado-cancelado {
+  color: red;
+}
+#content-s1 #tarjetas .card .content .main-estado.estado-preparado {
+  color: green;
+}
+#content-s1 #tarjetas .card .content .main-estado.estado-preparado {
+  color: #5b72c6;
+}
 #content-s1 #tarjetas .card .content .separador {
   border-right: 1px solid #d0d0d0;
 }

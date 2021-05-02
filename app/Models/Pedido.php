@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Tienda extends Authenticatable
+class Pedido extends Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -18,16 +18,19 @@ class Tienda extends Authenticatable
      */
     protected $fillable = [
         'id',
-        'nombre',
         'user_id',
-        'cif',
-        'location',
-        'horario',
+        'tienda_id',
+        'pedido',
+        'precio',
+        'fecha_recogida',
+        'comentarios',
         'estado',
-        'imagen',
         'created_at',
         'updated_at'
-
     ];
+
+    public function user(){
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 
 }
