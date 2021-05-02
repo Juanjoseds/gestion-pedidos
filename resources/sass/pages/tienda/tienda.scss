@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&family=Poppins:wght@700&display=swap');
+
+#cliente{
+    display: flex;
+}
+
+#content-s1{
+    background-color: #e2e8f0;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+
+    .bg-header{
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        width: 100%;
+        height: auto;
+        background-color: #000034;
+        padding: 3em 3em 5em 3em;
+
+        h1{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .today{
+            color: white;
+            display: flex;
+            width: 70%;
+            margin-top: 2em;
+
+            p{
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+
+                &.lastPedido{
+                    color: gray;
+                    font-family: 'Nunito', sans-serif;
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+        .main-filter{
+            display: flex;
+            align-items: center;
+
+            .filter-add{
+                color: white;
+                width: auto!important;
+                margin-left: 1em;
+
+                button{
+                    border-radius: 30px;
+                    background-color: #48bb78;
+
+                    &:hover{
+                        background-color: #6ff1a2;
+                    }
+                    svg{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        .filter{
+            margin-top: 2em;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            width: 55%;
+            padding: 0.5em;
+
+            p{
+                color: white;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .filtros-btn{
+                text-align: right;
+                button{
+                    border-radius: 30px;
+                    padding: 1px 8px 0 8px;
+                    border-color: #adadad;
+                    color: #adadad;
+
+                    &:hover{
+                        color: black;
+                    }
+
+                    svg{
+                        width: 15px;
+
+                        &.icon-success{
+                            color: #34ce34;
+                        }
+                        &.icon-pending{
+                            color: orange;
+                        }
+                        &.icon-canceled{
+                            color: red;
+                        }
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    #tarjetas{
+        width: 65%;
+        padding: 0 2em 2em 2em;
+        margin-top: -3em;
+
+        .card{
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            border-left: 8px solid #3c97bf;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+            height: 7em;
+
+            &:not(:nth-child(1)){
+                margin-top: 1em;
+            }
+
+            .content{
+                margin-left: 1em;
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                .separador{
+                    border-right: 1px solid #d0d0d0;
+                }
+
+                img{
+                    width: 65px;
+                    height: auto;
+                    border-radius: 99px;
+                }
+
+                .actions{
+                    color: #c7c7c7;
+                    text-align: center;
+                    svg:not(:nth-child(1)){
+                        margin-left: 1em;
+
+                    }
+                }
+
+                p{
+                    margin: 0;
+
+                    &.hora, &.nombre, &.fecha{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+
+                    &.lastTime{
+                        font-family: 'Nunito', sans-serif;
+                        color: gray;
+                    }
+
+                    &.comentario{
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

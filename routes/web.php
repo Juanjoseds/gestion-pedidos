@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\TiendaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->name('home.login');
 
 Route::group(['middleware' => 'auth'], function(){
     Route::group(['middleware' => 'check-type-user:cliente'],function(){
@@ -26,7 +27,7 @@ Route::group(['middleware' => 'auth'], function(){
     });
 
     Route::group(['middleware' => 'check-type-user:tienda'],function(){
-        Route::get('/tienda', [ClienteController::class, 'index']);
+        Route::get('/tienda', [TiendaController::class, 'index']);
     });
 
     Route::get('/logout', [LoginController::class, 'logout']);

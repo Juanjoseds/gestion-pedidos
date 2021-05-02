@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&family=Poppins:wght@700&display=swap);
+#cliente {
+  display: flex;
+}
+
+#content-s1 {
+  background-color: #e2e8f0;
+  height: 100vh;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+}
+#content-s1 .bg-header {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 100%;
+  height: auto;
+  background-color: #000034;
+  padding: 3em 3em 5em 3em;
+}
+#content-s1 .bg-header h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+#content-s1 .bg-header .today {
+  color: white;
+  display: flex;
+  width: 70%;
+  margin-top: 2em;
+}
+#content-s1 .bg-header .today p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+#content-s1 .bg-header .today p.lastPedido {
+  color: gray;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+#content-s1 .bg-header .main-filter {
+  display: flex;
+  align-items: center;
+}
+#content-s1 .bg-header .main-filter .filter-add {
+  color: white;
+  width: auto !important;
+  margin-left: 1em;
+}
+#content-s1 .bg-header .main-filter .filter-add button {
+  border-radius: 30px;
+  background-color: #48bb78;
+}
+#content-s1 .bg-header .main-filter .filter-add button:hover {
+  background-color: #6ff1a2;
+}
+#content-s1 .bg-header .main-filter .filter-add button svg {
+  width: 20px;
+}
+#content-s1 .bg-header .filter {
+  margin-top: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  width: 55%;
+  padding: 0.5em;
+}
+#content-s1 .bg-header .filter p {
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#content-s1 .bg-header .filter .filtros-btn {
+  text-align: right;
+}
+#content-s1 .bg-header .filter .filtros-btn button {
+  border-radius: 30px;
+  padding: 1px 8px 0 8px;
+  border-color: #adadad;
+  color: #adadad;
+}
+#content-s1 .bg-header .filter .filtros-btn button:hover {
+  color: black;
+}
+#content-s1 .bg-header .filter .filtros-btn button svg {
+  width: 15px;
+}
+#content-s1 .bg-header .filter .filtros-btn button svg.icon-success {
+  color: #34ce34;
+}
+#content-s1 .bg-header .filter .filtros-btn button svg.icon-pending {
+  color: orange;
+}
+#content-s1 .bg-header .filter .filtros-btn button svg.icon-canceled {
+  color: red;
+}
+#content-s1 #tarjetas {
+  width: 65%;
+  padding: 0 2em 2em 2em;
+  margin-top: -3em;
+}
+#content-s1 #tarjetas .card {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  border-left: 8px solid #3c97bf;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  height: 7em;
+}
+#content-s1 #tarjetas .card:not(:nth-child(1)) {
+  margin-top: 1em;
+}
+#content-s1 #tarjetas .card .content {
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#content-s1 #tarjetas .card .content .separador {
+  border-right: 1px solid #d0d0d0;
+}
+#content-s1 #tarjetas .card .content img {
+  width: 65px;
+  height: auto;
+  border-radius: 99px;
+}
+#content-s1 #tarjetas .card .content .actions {
+  color: #c7c7c7;
+  text-align: center;
+}
+#content-s1 #tarjetas .card .content .actions svg:not(:nth-child(1)) {
+  margin-left: 1em;
+}
+#content-s1 #tarjetas .card .content p {
+  margin: 0;
+}
+#content-s1 #tarjetas .card .content p.hora, #content-s1 #tarjetas .card .content p.nombre, #content-s1 #tarjetas .card .content p.fecha {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+#content-s1 #tarjetas .card .content p.lastTime {
+  font-family: "Nunito", sans-serif;
+  color: gray;
+}
+#content-s1 #tarjetas .card .content p.comentario {
+  text-align: justify;
+}
