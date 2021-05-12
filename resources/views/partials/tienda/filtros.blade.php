@@ -13,5 +13,5 @@
     </div>
 </div>
 <div class="filter filter-add">
-    <button type="button" class="btn btn-success"><i class="icon-canceled" data-feather="shopping-bag"></i> Nuevo pedido</button>
+    <button type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoPedido" class="btn btn-success"><i class="icon-canceled" data-feather="shopping-bag"></i> Nuevo pedido</button>
 </div>
