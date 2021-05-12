@@ -1,0 +1,25 @@
+#cliente {
+  display: flex;
+}
+
+#content-s1 {
+  background-color: #e2e8f0;
+  height: 100vh;
+  width: 100%;
+}
+#content-s1 * {
+  border-width: 0;
+  border-style: solid;
+  border-color: #acb0b5;
+}
+#content-s1 .bg-header {
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  width: 100%;
+  height: auto;
+  background-color: #000034;
+  padding: 3em;
+}
+#content-s1 .bg-header h1 {
+  color: white;
+}
