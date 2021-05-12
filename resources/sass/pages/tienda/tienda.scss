@@ -180,6 +180,7 @@
                 .actions{
                     color: #c7c7c7;
                     text-align: center;
+                    cursor: pointer;
                     svg:not(:nth-child(1)){
                         margin-left: 1em;
 
@@ -201,7 +202,7 @@
                     }
 
                     &.comentario{
-                        text-align: justify;
+                        text-align: center;
                     }
                 }
             }

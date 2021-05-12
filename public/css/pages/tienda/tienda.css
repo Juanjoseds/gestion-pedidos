@@ -152,6 +152,7 @@
 #content-s1 #tarjetas .card .content .actions {
   color: #c7c7c7;
   text-align: center;
+  cursor: pointer;
 }
 #content-s1 #tarjetas .card .content .actions svg:not(:nth-child(1)) {
   margin-left: 1em;
@@ -169,5 +170,5 @@
   color: gray;
 }
 #content-s1 #tarjetas .card .content p.comentario {
-  text-align: justify;
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 @extends('./layouts/layoutMaster')
 
-@section('title', 'Login')
+@section('title', 'Inicio | ' . $tienda->nombre)
 
 @section('styles')
     <link rel="stylesheet" href="{{asset("/css/pages/tienda/tienda.css")}}">
