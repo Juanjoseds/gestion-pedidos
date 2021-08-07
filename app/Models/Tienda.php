@@ -30,4 +30,9 @@ class Tienda extends Authenticatable
 
     ];
 
+    public function pedidos(){
+        return $this->hasMany(Pedido::class, 'tienda_id', 'id')
+            ->orderBy('created_at', 'DESC')->with('user');
+    }
+
 }

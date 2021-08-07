@@ -4,8 +4,8 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{asset("/css/pages/tienda/tienda.css")}}">
-    <link rel="stylesheet" href="{{asset("/css/pages/tienda/navbar.css")}}">
     <link rel="stylesheet" href="{{asset("/vendors/css/bootstrap.css")}}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -17,12 +17,14 @@
 
     {{-- MODALES --}}
     @include('partials/tienda/modal/modalNuevoPedido')
+    @include('partials/tienda/modal/modalPedido')
 @endsection
 
 @section('scripts')
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="{{asset("/js/scripts/jquery.min.js")}}"></script>
     <script src="{{asset("/js/pages/tienda.js")}}"></script>
     <script src="{{asset("/js/pages/navbar-tienda.js")}}"></script>
-    {{--<script src="{{asset("/js/pages/login.js")}}"></script>--}}
     <script src="{{asset("/js/bootstrap.js")}}"></script>
 @endsection
