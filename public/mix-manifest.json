@@ -1,5 +1,5 @@
 {
-    "/css/pages/tienda/tienda.css": "/css/pages/tienda/tienda.css?id=142303d25ab58914374d",
+    "/css/pages/tienda/tienda.css": "/css/pages/tienda/tienda.css?id=c35e33671192a8184584",
     "/css/pages/login/login.css": "/css/pages/login/login.css?id=35c16188d6230102f4fd",
     "/css/pages/inicio/inicio.css": "/css/pages/inicio/inicio.css?id=68b329da9893e34099c7",
     "/js/scripts/feather.min.js": "/js/scripts/feather.min.js?id=879cc83dce4bec2ef052",
@@ -9,6 +9,7 @@
     "/js/bootstrap.js": "/js/bootstrap.js?id=cc794ba856ca88316927",
     "/js/pages/login.js": "/js/pages/login.js?id=f99d40826cb62abcf1a0",
     "/js/pages/navbar-tienda.js": "/js/pages/navbar-tienda.js?id=20a0d10ed582a3e72946",
-    "/js/pages/tienda.js": "/js/pages/tienda.js?id=4b88ef409b8366cf2994",
+    "/js/pages/offcanvas.js": "/js/pages/offcanvas.js?id=f1a6fb74e58f2ac9d7f0",
+    "/js/pages/tienda.js": "/js/pages/tienda.js?id=e7d7921d34301e88ae9d",
     "/vendors/css/bootstrap.css": "/vendors/css/bootstrap.css?id=7c4828b05185bc1c5f8a"
 }

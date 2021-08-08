@@ -1,11 +1,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&family=Poppins:wght@700&display=swap);
-#modalPedido .modal-dialog {
-  margin: 0;
-  float: right;
-  height: 100%;
+#offcanvasPedido {
+  width: 600px;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-#modalPedido .modal-dialog .modal-content {
+#offcanvasPedido #spinner {
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #cliente-nav {

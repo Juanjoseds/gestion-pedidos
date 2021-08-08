@@ -37,8 +37,9 @@
                     @endif
                 </div>
                 <div class="col actions">
-                    <div onclick="openPedido('{{json_encode($pedido)}}')"><i data-feather="eye"></i></div>
-                    <div onclick="openPedido('{{json_encode($pedido)}}')"><i data-feather="trash-2"></i></div>
+                    <div class="iconoVerPedido" data-pedido_id="{{$pedido->id}}" data-feather="eye" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPedido" aria-controls="offcanvasRight"></div>
+
+                    <div onclick="removePedido({{$pedido->id}})"><i data-feather="trash-2"></i></div>
                 </div>
 
             </div>
