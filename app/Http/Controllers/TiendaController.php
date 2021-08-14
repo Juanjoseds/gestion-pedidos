@@ -29,6 +29,16 @@ class TiendaController extends Controller
         return response(['view' => $html], 200);
     }
 
+    public function prepararPedido(Request $request, $id){
+        $pedido = Pedido::query()->where('id', $request->id)->first();
+
+        $pedido->precio = $request->precio;
+        $pedido->estado = 'Preparado';
+        // TODO: Enviar email al cliente
+
+        $pedido->save();
+    }
+
     public function destroy(Request $request, $id){
         Pedido::destroy($id);
         return response(['message' => 'Se ha borrado satisfactoriamente'], 200);

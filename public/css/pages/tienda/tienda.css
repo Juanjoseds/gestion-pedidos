@@ -330,8 +330,8 @@
 #content-s1 #tarjetas .card .content .main-estado.estado-preparado {
   color: green;
 }
-#content-s1 #tarjetas .card .content .main-estado.estado-preparado {
-  color: #5b72c6;
+#content-s1 #tarjetas .card .content .main-estado.estado-proceso {
+  color: #0D6EFD;
 }
 #content-s1 #tarjetas .card .content .separador {
   border-right: 1px solid #d0d0d0;

@@ -29,7 +29,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::group(['middleware' => 'check-type-user:tienda'],function(){
         Route::get('/tienda', [TiendaController::class, 'index']);
         Route::get('/pedido/{id}', [TiendaController::class, 'getPedido']);
+        Route::post('/pedido/preparado/{id}', [TiendaController::class, 'prepararPedido']);
         Route::delete('/pedido/delete/{id}', [TiendaController::class, 'destroy']);
+
 
     });
 

@@ -14,32 +14,35 @@ function removePedido(id){
         confirmButtonText: 'Borrar pedido',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        $.ajax({
-            type: 'delete',
-            url: '/pedido/delete/'+id,
-            success: function(data) {
-                Swal.fire(
-                    '¡Borrado!',
-                    'El pedido se ha borrado satisfactoriamente',
-                    'success'
-                ).then(() => {
-                    location.reload();
-                })
-            },
-            error: function(xhr, status, error) {
-                let err = JSON.parse(xhr.responseText);
-                console.log(err);
-                Swal.fire({
-                    icon: 'error',
-                    title: err.title,
-                    text: err.text,
-                })
-            }
-        });
+        if (result.isConfirmed) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type: 'delete',
+                url: '/pedido/delete/'+id,
+                success: function(data) {
+                    Swal.fire(
+                        '¡Borrado!',
+                        'El pedido se ha borrado satisfactoriamente',
+                        'success'
+                    ).then(() => {
+                        location.reload();
+                    })
+                },
+                error: function(xhr, status, error) {
+                    let err = JSON.parse(xhr.responseText);
+                    console.log(err);
+                    Swal.fire({
+                        icon: 'error',
+                        title: err.title,
+                        text: err.text,
+                    })
+                }
+            });
+        }
+
     })
 }

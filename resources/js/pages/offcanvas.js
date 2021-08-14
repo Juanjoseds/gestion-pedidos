@@ -27,7 +27,10 @@ function offCanvasEvents(){
             success: function (response) {
                 $('#pedido').fadeOut(300, function (){
                     $(this).html(response.view).fadeIn();
+                    feather.replace();
+                    enableSubmitEvent();
                 });
+
             },
             error: function (error) {
                 console.log(error);
@@ -44,6 +47,35 @@ function offCanvasEvents(){
                 </div>
             </div>
         `);
+    });
+
+}
+
+function enableSubmitEvent(){
+    $('#preparar-pedido-form').on('submit', function (e){
+        e.preventDefault();
+        var form = document.getElementById("preparar-pedido-form");
+        const id = $(this).data('id');
+        let formData = new FormData(form);
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: '/pedido/preparado/'+id,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
     });
 }
 

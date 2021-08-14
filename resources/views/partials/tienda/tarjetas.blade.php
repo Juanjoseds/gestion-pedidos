@@ -19,10 +19,10 @@
                     <p class="fecha">{{$pedido->created_at->format('d M')}}</p>
 
                     <div class="main-estado
-                        @if($pedido->estado==='pendiente') estado-pendiente @endif
-                        @if($pedido->estado==='cancelado') estado-cancelado @endif
-                        @if($pedido->estado==='preparado') estado-preparado @endif
-                        @if($pedido->estado==='en proceso') estado-proceso @endif
+                        @if($pedido->estado==='Pendiente') estado-pendiente @endif
+                        @if($pedido->estado==='Cancelado') estado-cancelado @endif
+                        @if($pedido->estado==='Preparado') estado-preparado @endif
+                        @if($pedido->estado==='En proceso') estado-proceso @endif
                         ">
 
                         <li>{{$pedido->estado}}</li>
@@ -37,7 +37,7 @@
                     @endif
                 </div>
                 <div class="col actions">
-                    <div class="iconoVerPedido" data-pedido_id="{{$pedido->id}}" data-feather="eye" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPedido" aria-controls="offcanvasRight"></div>
+                    <a type="button" class="iconoVerPedido" data-pedido_id="{{$pedido->id}}" data-feather="eye" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPedido" aria-controls="offcanvasRight"></a>
 
                     <div onclick="removePedido({{$pedido->id}})"><i data-feather="trash-2"></i></div>
                 </div>
